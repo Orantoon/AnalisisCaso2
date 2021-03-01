@@ -1,55 +1,63 @@
 #include <iostream>
-
 using namespace std;
 
-class StrategyObserver{
+class StrategyObserver{	
 public:
     virtual void play() = 0;
-    virtual void update() = 0;
+    virtual void update(int state) = 0;
 };
 
 
 // Clases de los media
-class Spotify : public StrategyObserver{
-public:
-    virtual void play(){
-        cout << "Spotify esta en ejecucion" << endl;
-    }
-
-    virtual void update(){
-        cout << "Me notificaron de la ejecucion(Spotify)" << endl;   // Pendiente aun
-    }
-};
-
-class YoutubeMusic : public StrategyObserver{
-public:
-    virtual void play(){
-        cout << "YoutubeMusic esta en ejecucion" << endl;
-    }
-
-    virtual void update(){
-        cout << "Me notificaron de la ejecucion(YoutubeMusica)" << endl;   // Pendiente aun
-    }
-};
-
 class Television : public StrategyObserver{
 public:
     virtual void play(){
-        cout << "Television esta en ejecucion" << endl;
+        cout << endl << "~~~Television esta en ejecucion" << endl;
     }
 
-    virtual void update(){
-        cout << "Me notificaron de la ejecucion(Television)" << endl;   // Pendiente aun
+    virtual void update(int state){
+    	if (state != 1){
+    		cout << "Television detecto un media, Television apagado" << endl;
+		}
     }
 };
 
 class Radio : public StrategyObserver{
 public:
     virtual void play(){
-        cout << "Radio esta en ejecucion" << endl;
+        cout << endl << "~~~Radio esta en ejecucion" << endl;
     }
 
-    virtual void update(){
-        cout << "Me notificaron de la ejecucion(Radio)" << endl;   // Pendiente aun
+    virtual void update(int state){
+    	if (state != 2){
+    		cout << "Radio detecto un media, Radio apagado" << endl;
+		}
+    }
+};
+
+class Spotify : public StrategyObserver{
+	
+public:
+    virtual void play(){
+        cout << endl << "~~~Spotify esta en ejecucion" << endl;
+    }
+
+    virtual void update(int state){
+    	if (state != 3){
+    		cout << "Spotify detecto un media, Spotify apagado" << endl;
+		}
+    }
+};
+
+class YoutubeMusic : public StrategyObserver{
+public:
+    virtual void play(){
+        cout << endl << "~~~YoutubeMusic esta en ejecucion" << endl;
+    }
+
+    virtual void update(int state){
+    	if (state != 4){
+    		cout << "YoutubeMusic detecto un media, YoutubeMusic apagado" << endl;
+		}
     }
 };

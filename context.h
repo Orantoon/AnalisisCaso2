@@ -1,9 +1,10 @@
-#include "strategyObserver.h"
+#include "subject.h"
 
 class Context{
-public:
+private:
     StrategyObserver* estrategia;
 
+public:
     Context(StrategyObserver* pEstrategia){
         estrategia = pEstrategia;
     }
