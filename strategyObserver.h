@@ -4,7 +4,7 @@ using namespace std;
 class StrategyObserver{	
 public:
     virtual void play() = 0;
-    virtual void update(int state) = 0;
+    virtual void update(int pState) = 0;
 };
 
 
@@ -15,8 +15,8 @@ public:
         cout << endl << "~~~Television esta en ejecucion" << endl;
     }
 
-    virtual void update(int state){
-    	if (state != 1){
+    virtual void update(int pState){
+    	if (pState != 1){
     		cout << "Television detecto un media, Television apagado" << endl;
 		}
     }
@@ -28,8 +28,8 @@ public:
         cout << endl << "~~~Radio esta en ejecucion" << endl;
     }
 
-    virtual void update(int state){
-    	if (state != 2){
+    virtual void update(int pState){
+    	if (pState != 2){
     		cout << "Radio detecto un media, Radio apagado" << endl;
 		}
     }
@@ -42,8 +42,8 @@ public:
         cout << endl << "~~~Spotify esta en ejecucion" << endl;
     }
 
-    virtual void update(int state){
-    	if (state != 3){
+    virtual void update(int pState){
+    	if (pState != 3){
     		cout << "Spotify detecto un media, Spotify apagado" << endl;
 		}
     }
@@ -55,8 +55,8 @@ public:
         cout << endl << "~~~YoutubeMusic esta en ejecucion" << endl;
     }
 
-    virtual void update(int state){
-    	if (state != 4){
+    virtual void update(int pState){
+    	if (pState != 4){
     		cout << "YoutubeMusic detecto un media, YoutubeMusic apagado" << endl;
 		}
     }

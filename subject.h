@@ -8,13 +8,13 @@ private:
 	
 public:
 	int getState(){return state;}
-	void setState(int _state){
-		state = _state;
+	void setState(int pState){
+		state = pState;
 		notifyObservers();
 	}
 	
-	void attach(StrategyObserver* observer){
-		observers.push_back(observer);
+	void attach(StrategyObserver* pObserver){
+		observers.push_back(pObserver);
 	}
 	
 	void notifyObservers(){
