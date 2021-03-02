@@ -20,22 +20,22 @@ void menu(Subject subject, Television television, Radio radio, Spotify spotify, 
 		switch(option){
 			case 1:
 				subject.setState(1);
-				context = *new Context(&television);
+				context.setStrategy(&television);
 				context.execute();
 				break;
 			case 2:
 				subject.setState(2);
-				context = *new Context(&radio);
+				context.setStrategy(&radio);
 				context.execute();
 				break;
 			case 3:
 				subject.setState(3);
-				context = *new Context(&spotify);
+				context.setStrategy(&spotify);
 				context.execute();
 				break;
 			case 4:
 				subject.setState(4);
-				context = *new Context(&youtubeMusic);
+				context.setStrategy(&youtubeMusic);
 				context.execute();
 				break;
 			case 5:
@@ -67,14 +67,3 @@ int main(){
 
     return 0;
 }
-
-
-//Contexto context(&spotify);
-    //contexto.execute();
-
-    /*
-    int opcion = 1;
-    while(opcion != 0){
-        cout << "Ingrese una opcion de media a usar: /n
-                "
-    }*/
