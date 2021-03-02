@@ -1,0 +1,2 @@
+Cada uno tiene un main separado para que se vea el funcionamiento distinto. Cuando corre alguno de los dos mains el usuario va a ingresar strings hasta que escriba "Salir" |
+y luego la consola va a imprimir conforme funcione la estructura, ya sea en formato FIFO o LIFO
